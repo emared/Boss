@@ -271,7 +271,7 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
 }
 
 /*  ---  TABLES  ---  */
-/*  ---  Roles  ---  */
+/*  ---  General  ---  */
 .container {
   .table__container{padding:0; background: transparent; box-shadow: none !important;
     .card-header{margin-right: 0; margin-left: 0; padding-left: 0; padding-right: 0; border-bottom: none; margin-top: -75px;
@@ -281,11 +281,11 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
     }
     .card-body{padding:0;
       .dataTables_wrapper{
-        .dataTable_filters{display: flex; align-items: center; justify-content: flex-end;
+        .dataTable_filters{display: flex; align-items: center; justify-content: flex-start; padding-top: 12px;
           .dataTables_filter{padding-right: 1rem; position: relative;
             label{margin-bottom: 0;
-              &::before{content:url('../icons/search.svg'); position: absolute; top: 50%; left: 16px; width: 16px; height: 16px; z-index: 3; transform: translateY(-50%);}
-              input{border-radius: 5px; padding: 8px 15px 8px 40px; height: 42px; margin-left: 0; border-color: @grey4;}
+              &::before{content:url('../icons/search.svg'); position: absolute; top: 36px; left: 16px; width: 16px; height: 16px; z-index: 3;}
+              input{display:block; border-radius: 5px; padding: 8px 15px 8px 40px; height: 42px; margin-left: 0; border-color: @grey4; margin-top: 5px;}
             }
           }
         }
@@ -319,6 +319,11 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
                 }
               }
               &:hover{box-shadow: 0 10px 6px -6px rgba(0,0,0,0.1);}
+            }
+          }
+          .dropdown{
+            .dropdown-menu{border: none; padding: 0; box-shadow: 0 0 1.5rem rgba(0,0,0,.175);
+              li{padding: 10px 15px;}
             }
           }
           .btn-primary{padding: 10px 20px;
