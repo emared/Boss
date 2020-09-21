@@ -225,7 +225,7 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper" style="min-height: 776px;">
+    <div class="content-wrapper" style="min-height: 745px;">
 
       <!-- Content Header (Page header) -->
       <div class="content-header">
@@ -240,8 +240,8 @@
             </div>
             <div class="col-sm-4">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="./home.html">Home</a></li>
-                <li class="breadcrumb-item active">Roles</li>
+                <li class="breadcrumb-item"><a href="https://website2qhklmucl4agi.azurewebsites.net/">Home</a></li>
+                <li class="breadcrumb-item active">Roles | BOSS</li>
               </ol>
             </div>
           </div><!-- /.row -->
@@ -251,13 +251,20 @@
       <!-- MAIN CONTENT -->
       <div class="content">
         <div class="container">
-          <div id="IdentityRolesWrapper" class="card table__container">
+          <div id="IdentityRolesWrapper" class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5 class="card-title">Roles</h5>
+                </div>
+                <div class="text-right col-md-6">
+                  <button name="CreateRole" class="btn btn-primary" type="button" data-busy-text="Processing..."><i class="fa fa-plus"></i> <span>New role</span></button>
+                </div>
+              </div>
+            </div>
             <div class="card-body">
               <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                <div class="dataTable_filters">
-                  <div id="DataTables_Table_0_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="Search" aria-controls="DataTables_Table_0"></label></div>
-                  <button name="CreateUser" class="btn btn-primary" type="button" data-busy-text="Processing..."><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="btn-icon" viewBox="0 0 384 512"><path d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"/></svg><span>New user</span></button>
-                </div>
+                <div class="dataTable_filters"></div>
                 <div id="DataTables_Table_0_processing" class="dataTables_processing card" style="display: none;">Processing...</div>
                 <div class="dataTables_scroll">
                   <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
@@ -265,8 +272,8 @@
                       <table class="nowrap table table-striped dataTable no-footer" role="grid" style="margin-left: 0px; width: 1085px;">
                         <thead>
                           <tr role="row">
-                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 535px;" aria-sort="ascending" aria-label="Role name: activate to sort column descending">Role name</th>
-                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 484px;" aria-label="Actions">Actions</th>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 358px;" aria-label="Actions">Actions</th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 661px;" aria-sort="ascending" aria-label="Role name: activate to sort column descending">Role name</th>
                           </tr>
                         </thead>
                       </table>
@@ -276,71 +283,56 @@
                     <table class="nowrap table table-striped dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info" style="width: 1085px;">
                       <thead>
                         <tr role="row" style="height: 0px;">
-                          <th class="sorting_asc" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 535px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 358px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Actions">
+                            <div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Actions</div>
+                          </th>
+                          <th class="sorting_asc" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 661px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
                             aria-sort="ascending" aria-label="Role name: activate to sort column descending">
                             <div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Role name</div>
-                          </th>
-                          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 484px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Actions">
-                            <div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Actions</div>
                           </th>
                         </tr>
                       </thead>
 
                       <tbody>
                         <tr role="row" class="odd">
-                          <td class="sorting_1"><span>admin</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
                           <td>
-                            <div class="action-buttons">
-                              <ul class="actions-menu">
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 576 512"><path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"/></svg><span>Edit</span></a></li>
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 448 512"><path d="M296 432h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zm-160 0h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zM440 64H336l-33.6-44.8A48 48 0 0 0 264 0h-80a48 48 0 0 0-38.4 19.2L112 64H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h24v368a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V96h24a8 8 0 0 0 8-8V72a8 8 0 0 0-8-8zM171.2 38.4A16.1 16.1 0 0 1 184 32h80a16.1 16.1 0 0 1 12.8 6.4L296 64H152zM384 464a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V96h320zm-168-32h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8z"/></svg><span>Delete</span></a></li>
-                              </ul>
+                            <div class="dropdown action-button">
+                              <ul class="dropdown-menu">
+                                <li><a>Edit</a></li>
+                              </ul><button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog mr-1"></i>Actions</button>
                             </div>
                           </td>
+                          <td class="sorting_1"><span>admin</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
                         </tr>
                         <tr role="row" class="even">
-                          <td class="sorting_1"><span>coach</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
                           <td>
-                            <div class="action-buttons">
-                              <ul class="actions-menu">
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 576 512"><path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"/></svg><span>Edit</span></a></li>
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 448 512"><path d="M296 432h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zm-160 0h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zM440 64H336l-33.6-44.8A48 48 0 0 0 264 0h-80a48 48 0 0 0-38.4 19.2L112 64H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h24v368a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V96h24a8 8 0 0 0 8-8V72a8 8 0 0 0-8-8zM171.2 38.4A16.1 16.1 0 0 1 184 32h80a16.1 16.1 0 0 1 12.8 6.4L296 64H152zM384 464a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V96h320zm-168-32h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8z"/></svg><span>Delete</span></a></li>
-                              </ul>
+                            <div class="dropdown action-button">
+                              <ul class="dropdown-menu">
+                                <li><a>Edit</a></li>
+                              </ul><button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog mr-1"></i>Actions</button>
                             </div>
                           </td>
+                          <td class="sorting_1"><span>clubmanager</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
                         </tr>
                         <tr role="row" class="odd">
-                          <td class="sorting_1"><span>support1</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
                           <td>
-                            <div class="action-buttons">
-                              <ul class="actions-menu">
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 576 512"><path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"/></svg><span>Edit</span></a></li>
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 448 512"><path d="M296 432h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zm-160 0h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zM440 64H336l-33.6-44.8A48 48 0 0 0 264 0h-80a48 48 0 0 0-38.4 19.2L112 64H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h24v368a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V96h24a8 8 0 0 0 8-8V72a8 8 0 0 0-8-8zM171.2 38.4A16.1 16.1 0 0 1 184 32h80a16.1 16.1 0 0 1 12.8 6.4L296 64H152zM384 464a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V96h320zm-168-32h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8z"/></svg><span>Delete</span></a></li>
-                              </ul>
+                            <div class="dropdown action-button">
+                              <ul class="dropdown-menu">
+                                <li><a>Edit</a></li>
+                              </ul><button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog mr-1"></i>Actions</button>
                             </div>
                           </td>
+                          <td class="sorting_1"><span>consulente</span><span class="badge badge-pill badge-success ml-1">Default</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
                         </tr>
-                        <tr role="row" class="odd">
-                          <td class="sorting_1"><span>support2</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
+                        <tr role="row" class="even">
                           <td>
-                            <div class="action-buttons">
-                              <ul class="actions-menu">
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 576 512"><path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"/></svg><span>Edit</span></a></li>
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 448 512"><path d="M296 432h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zm-160 0h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zM440 64H336l-33.6-44.8A48 48 0 0 0 264 0h-80a48 48 0 0 0-38.4 19.2L112 64H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h24v368a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V96h24a8 8 0 0 0 8-8V72a8 8 0 0 0-8-8zM171.2 38.4A16.1 16.1 0 0 1 184 32h80a16.1 16.1 0 0 1 12.8 6.4L296 64H152zM384 464a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V96h320zm-168-32h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8z"/></svg><span>Delete</span></a></li>
-                              </ul>
+                            <div class="dropdown action-button">
+                              <ul class="dropdown-menu">
+                                <li><a>Edit</a></li>
+                              </ul><button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog mr-1"></i>Actions</button>
                             </div>
                           </td>
-                        </tr>
-                        <tr role="row" class="odd">
-                          <td class="sorting_1"><span>support3</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
-                          <td>
-                            <div class="action-buttons">
-                              <ul class="actions-menu">
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 576 512"><path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"/></svg><span>Edit</span></a></li>
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 448 512"><path d="M296 432h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zm-160 0h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zM440 64H336l-33.6-44.8A48 48 0 0 0 264 0h-80a48 48 0 0 0-38.4 19.2L112 64H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h24v368a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V96h24a8 8 0 0 0 8-8V72a8 8 0 0 0-8-8zM171.2 38.4A16.1 16.1 0 0 1 184 32h80a16.1 16.1 0 0 1 12.8 6.4L296 64H152zM384 464a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V96h320zm-168-32h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8z"/></svg><span>Delete</span></a></li>
-                              </ul>
-                            </div>
-                          </td>
+                          <td class="sorting_1"><span>salesmanager</span><span class="badge badge-pill badge-info ml-1">Public</span></td>
                         </tr>
                       </tbody>
                     </table>
@@ -356,7 +348,7 @@
                         </select> entries</label></div>
                   </div>
                   <div class="col-auto">
-                    <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div>
+                    <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div>
                   </div>
                   <div class="col">
                     <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
@@ -396,39 +388,38 @@
     kendo.culture("it-IT");
   </script>
   <script src="./bootstrap-resurces/roles_files/Volo.Abp.Identity.Web.Pages.Identity.Roles.IndexModel.A7B0BDDF18F8E4C5171F92AE923CB01D.js"></script>
+  <script src="./js/main.js"></script>
 
-  <div id="Modal_103611597917279687Container">
-    <form action="https://website2qhklmucl4agi.azurewebsites.net/Identity/Roles/EditModal" method="post" novalidate="novalidate">
+  <div id="Modal_4636821600672000809Container">
+    <form action="https://website2qhklmucl4agi.azurewebsites.net/Identity/Roles/CreateModal" method="post" novalidate="novalidate">
       <div class="modal fade show" tabindex="-1" role="dialog" aria-modal="true" style="display: block;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
 
             <div class="modal-header">
-              <h5 class="modal-title">Edit Role</h5>
+              <h5 class="modal-title">New role</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg></span>
+                <span aria-hidden="true">×</span>
               </button>
             </div>
             <div class="modal-body">
-              <div class="form-group"><input type="hidden" data-val="true" data-val-required="The Id field is required." id="Role_Id" name="Role.Id" value="6fbf93da-91ad-ead7-d4af-39f6d4892a5f" class="form-control "></div>
-              <div class="form-group"><input type="hidden" id="Role_ConcurrencyStamp" name="Role.ConcurrencyStamp" value="818cd70bf2fe48e3b50b9a6930bbe23e" class="form-control "></div>
               <div class="form-group"><label for="Role_Name">Role name</label><span> * </span><input type="text" data-val="true" data-val-length="The field Role name must be a string with a maximum length of 256." data-val-length-max="256"
-                  data-val-required="The Role name field is required." id="Role_Name" maxlength="256" name="Role.Name" value="admin" class="form-control valid" readonly="" aria-describedby="Role_Name-error" aria-invalid="false"><span
-                  class="text-danger field-validation-valid" data-valmsg-for="Role.Name" data-valmsg-replace="true"></span></div>
+                  data-val-required="The Role name field is required." id="Role_Name" maxlength="256" name="Role.Name" value="" class="form-control "><span class="text-danger field-validation-valid" data-valmsg-for="Role.Name"
+                  data-valmsg-replace="true"></span></div>
               <div class="custom-checkbox custom-control mb-2"><input type="checkbox" data-val="true" data-val-required="The Default field is required." id="Role_IsDefault" name="Role.IsDefault" value="true" class="custom-control-input "><label
                   class="custom-control-label" for="Role_IsDefault">Default</label></div>
-              <div class="custom-checkbox custom-control mb-2"><input type="checkbox" checked="checked" data-val="true" data-val-required="The Public field is required." id="Role_IsPublic" name="Role.IsPublic" value="true"
-                  class="custom-control-input "><label class="custom-control-label" for="Role_IsPublic">Public</label></div>
+              <div class="custom-checkbox custom-control mb-2"><input type="checkbox" data-val="true" data-val-required="The Public field is required." id="Role_IsPublic" name="Role.IsPublic" value="true" class="custom-control-input "><label
+                  class="custom-control-label" for="Role_IsPublic">Public</label></div>
             </div>
-            <div class="modal-footer"><button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-              <button type="submit" class="btn btn-primary" data-busy-text="Saving..."><svg xmlns="http://www.w3.org/2000/svg" width="22px" height="16px" viewBox="0 0 448 512"><path d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z"/></svg><span>Save</span></button>
+            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary" data-busy-text="Saving..."><i class="fa fa-check"></i> <span>Save</span></button>
             </div>
           </div>
         </div>
       </div>
 
       <input name="__RequestVerificationToken" type="hidden"
-        value="CfDJ8Dw5SRW-FglAtC_PTGEvm-LEwU5de9PZFJXQA5K2u5qnIf7fGZlwJL7NsGgL-4kyHqdtzJRvmTHiJ6Wr5CwSeTDFQroWFC74ViMXg0PwyYS3Fw0coIh4Z8bQyzbvpUP0W5lOeG5rKVuDgdl7I0piQr775PWL2ELoRKIH18BtSxAEMo0YSlcuGjd9by67uT4ykw"><input name="Role.IsDefault"
+        value="CfDJ8Dw5SRW-FglAtC_PTGEvm-IHz07kemvSn8gT7e0Z6jpoFKcAGU_ixeRhHfZ205waaCoH0Vsqgr24jvcGfuYmN34qLIIqkr4tGJ03vyj-wDR9X6xcm0yPknOm2IHm4BJTlhN12YIpA4N8I-8Z2ag1HeI9YDok5l-Ptp8XBRByOjB9m5yOGXovEZeut9GNG6c91g"><input name="Role.IsDefault"
         type="hidden" value="false"><input name="Role.IsPublic" type="hidden" value="false">
     </form>
   </div>
