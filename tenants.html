@@ -158,7 +158,6 @@
                 <i class="nav-icon  fal fa-file-chart-line"></i>
                 <p>
                   Daily Cards
-                  <i class="right fal fa-angle-left"></i>
                 </p>
               </a>
             </li>
@@ -194,6 +193,23 @@
                     </li>
                   </ul>
                 </li>
+                <li class="nav-item has-treeview menu-open" id="MenuItem_TenantManagement">
+                  <a href="https://website2qhklmucl4agi.azurewebsites.net/TenantManagement/Tenants#" class="nav-link active">
+                    <i class="nav-icon  fal fa-dumbbell"></i>
+                    <p>
+                      Tenant management
+                      <i class="right fal fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item ">
+                      <a href="https://website2qhklmucl4agi.azurewebsites.net/TenantManagement/Tenants" class="nav-link active" id="MenuItem_TenantManagement.Tenants">
+                        <i class="fal fa-dumbbell nav-icon"></i>
+                        <p>Tenants</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
@@ -204,7 +220,7 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper" style="min-height: 776px;">
+    <div class="content-wrapper" style="min-height: 745px;">
 
       <!-- Content Header (Page header) -->
       <div class="content-header">
@@ -212,7 +228,7 @@
           <div class="row mb-2">
 
             <div class="col-sm-4">
-              <h1 class="m-0 text-dark">Tenants</h1>
+              <h1 class="m-0 text-dark">Tenants | BOSS</h1>
             </div>
             <div class="col-sm-4" dirid="AbpContentToolbar">
 
@@ -220,7 +236,7 @@
             <div class="col-sm-4">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="https://website2qhklmucl4agi.azurewebsites.net/">Home</a></li>
-                <li class="breadcrumb-item active">Tenants</li>
+                <li class="breadcrumb-item active">Tenants | BOSS</li>
               </ol>
             </div>
           </div><!-- /.row -->
@@ -230,12 +246,21 @@
       <!-- MAIN CONTENT -->
       <div class="content">
         <div class="container">
-          <div id="TenantsWrapper" class="card table__container">
+          <div id="TenantsWrapper" class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5 class="card-title">Tenants</h5>
+                </div>
+                <div class="text-right col-md-6">
+                  <button name="CreateTenant" class="btn btn-primary" type="button" data-busy-text="Processing..."><i class="fa fa-plus"></i> <span>New tenant</span></button>
+                </div>
+              </div>
+            </div>
             <div class="card-body">
               <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                 <div class="dataTable_filters">
-                  <div id="DataTables_Table_0_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="Search" aria-controls="DataTables_Table_0"></label></div>
-                  <button name="CreateUser" class="btn btn-primary" type="button" data-busy-text="Processing..."><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="btn-icon" viewBox="0 0 384 512"><path d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"/></svg><span>New user</span></button>
+                  <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div>
                 </div>
                 <div id="DataTables_Table_0_processing" class="dataTables_processing card" style="display: none;">Processing...</div>
                 <div class="dataTables_scroll">
@@ -244,8 +269,8 @@
                       <table class="nowrap table table-striped dataTable no-footer" role="grid" style="margin-left: 0px; width: 1085px;">
                         <thead>
                           <tr role="row">
-                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 544px;" aria-sort="ascending" aria-label="Tenant name: activate to sort column descending">Tenant name</th>
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 475px;" aria-label="Actions">Actions</th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 544px;" aria-sort="ascending" aria-label="Tenant name: activate to sort column descending">Tenant name</th>
                           </tr>
                         </thead>
                       </table>
@@ -255,38 +280,40 @@
                     <table class="nowrap table table-striped dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info" style="width: 1085px;">
                       <thead>
                         <tr role="row" style="height: 0px;">
+                          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 475px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Actions">
+                            <div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Actions</div>
+                          </th>
                           <th class="sorting_asc" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 544px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
                             aria-sort="ascending" aria-label="Tenant name: activate to sort column descending">
                             <div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Tenant name</div>
-                          </th>
-                          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 475px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Actions">
-                            <div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Actions</div>
                           </th>
                         </tr>
                       </thead>
 
                       <tbody>
                         <tr role="row" class="odd">
-                          <td class="sorting_1">ClubDemo</td>
                           <td>
-                            <div class="action-buttons">
-                              <ul class="actions-menu">
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 576 512"><path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"/></svg><span>Edit</span></a></li>
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 448 512"><path d="M296 432h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zm-160 0h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zM440 64H336l-33.6-44.8A48 48 0 0 0 264 0h-80a48 48 0 0 0-38.4 19.2L112 64H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h24v368a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V96h24a8 8 0 0 0 8-8V72a8 8 0 0 0-8-8zM171.2 38.4A16.1 16.1 0 0 1 184 32h80a16.1 16.1 0 0 1 12.8 6.4L296 64H152zM384 464a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V96h320zm-168-32h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8z"/></svg><span>Delete</span></a></li>
-                              </ul>
+                            <div class="dropdown action-button">
+                              <ul class="dropdown-menu">
+                                <li><a>Edit</a></li>
+                                <li><a>Connection Strings</a></li>
+                                <li><a>Delete</a></li>
+                              </ul><button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog mr-1"></i>Actions</button>
                             </div>
                           </td>
+                          <td class="sorting_1">ClubDemo</td>
                         </tr>
                         <tr role="row" class="even">
-                          <td class="sorting_1">ClubDemo2</td>
                           <td>
-                            <div class="action-buttons">
-                              <ul class="actions-menu">
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 576 512"><path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"/></svg><span>Edit</span></a></li>
-                                <li><a><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 448 512"><path d="M296 432h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zm-160 0h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8zM440 64H336l-33.6-44.8A48 48 0 0 0 264 0h-80a48 48 0 0 0-38.4 19.2L112 64H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h24v368a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V96h24a8 8 0 0 0 8-8V72a8 8 0 0 0-8-8zM171.2 38.4A16.1 16.1 0 0 1 184 32h80a16.1 16.1 0 0 1 12.8 6.4L296 64H152zM384 464a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V96h320zm-168-32h16a8 8 0 0 0 8-8V152a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v272a8 8 0 0 0 8 8z"/></svg><span>Delete</span></a></li>
-                              </ul>
+                            <div class="dropdown action-button">
+                              <ul class="dropdown-menu">
+                                <li><a>Edit</a></li>
+                                <li><a>Connection Strings</a></li>
+                                <li><a>Delete</a></li>
+                              </ul><button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog mr-1"></i>Actions</button>
                             </div>
                           </td>
+                          <td class="sorting_1">ClubDemo2</td>
                         </tr>
                       </tbody>
                     </table>
@@ -307,10 +334,10 @@
                   <div class="col">
                     <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
                       <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0"
+                        <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="https://website2qhklmucl4agi.azurewebsites.net/TenantManagement/Tenants#" aria-controls="DataTables_Table_0" data-dt-idx="0"
                             tabindex="0" class="page-link">Previous</a></li>
-                        <li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2"
+                        <li class="paginate_button page-item active"><a href="https://website2qhklmucl4agi.azurewebsites.net/TenantManagement/Tenants#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                        <li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="https://website2qhklmucl4agi.azurewebsites.net/TenantManagement/Tenants#" aria-controls="DataTables_Table_0" data-dt-idx="2"
                             tabindex="0" class="page-link">Next</a></li>
                       </ul>
                     </div>
