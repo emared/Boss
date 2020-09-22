@@ -367,6 +367,78 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
   }
 }
 
+/*  ---  DAILY CARD  ---  */
+/*  ---  List Table  ---  */
+.content-wrapper.daily-card__wrapper{
+  .content-header{max-width: 1240px; margin: 0 auto;}
+  .container-fluid{padding-bottom: 20px;
+    .row:first-child .col-md-12{max-width: 1240px; margin: 0 auto;
+      .k-widget:first-child{margin-right: 15px;}
+      span:not([role="button"]){display: none;}
+    }
+    .row:last-child .col-md-12{max-width: 1240px; margin: 0 auto;
+
+    }
+  }
+}
+
+/*  ---  Kendo UI grid  ---  */
+.k-widget{font-family: 'Montserrat', sans-serif;}
+.k-button {border-color: #fff; color: @grey1; background-color: #fff;
+  &:hover{color:@red; background-color: rgba(239,35,60,0.2); border-color: rgba(239,35,60,0.2);}
+}
+.k-button-group .k-button.k-state-active, .k-button-group .k-button.k-state-selected, .k-button-group .k-button:active, .k-button-group>input[type=radio]:checked+.k-button, .k-button-group>input[type=checkbox]:checked+.k-button{border-color: @red; color: #fff; background-color: @red; box-shadow: none;}
+.k-grid{
+  .k-grid-header{background-color:@grey2;}
+  .k-grid-content{
+    .k-alt{background-color:@grey2;}
+    tbody tr:hover{background-color: #e9e9e9;}
+    .k-command-cell{
+      .fas{font-weight: 300;}
+      .far{font-weight: 300;}
+    }
+  }
+  .k-pager-wrap{
+    .k-link{color: @grey1;}
+    .k-pager-numbers{
+      .k-link.k-state-selected{background-color: @red; border-color: @red; color: #fff;}
+    }
+    .k-pager-sizes{color: @grey1;}
+    .k-pager-info{color: @grey1;}
+  }
+}
+
+/*  ---  Pagination icons  ---  */
+.k-icon{font-family: "Font Awesome 5 Pro"; font-weight: 300;}
+
+/*  Full left  */
+.k-i-arrow-end-left::before{content: "\f33e";}
+.k-i-seek-w::before{content: "\f33e";}
+
+/*  Next left  */
+.k-i-arrow-60-left::before{content: "\f104";}
+.k-i-arrow-w::before{content: "\f104";}
+.k-i-expand-w::before{content: "\f104";}
+.k-i-sarrow-w::before{content: "\f104";}
+
+/*  Next right  */
+.k-i-arrow-60-right::before{content: "\f105";}
+.k-i-arrow-e::before{content: "\f105";}
+.k-i-expand-e::before{content: "\f105";}
+.k-i-expand::before{content: "\f105";}
+.k-i-sarrow-e::before{content: "\f105";}
+
+/*  Full right  */
+.k-i-arrow-end-right::before{content: "\f340";}
+.k-i-seek-e::before{content: "\f340";}
+
+/*  Dropdown  */
+.k-i-arrow-60-down::before{content: "\f107";}
+.k-i-arrow-s::before{content: "\f107";}
+.k-i-collapse::before{content: "\f107";}
+.k-i-expand-s::before{content: "\f107";}
+.k-i-sarrow-s::before{content: "\f107";}
+
 /*  ---  MY PROFILE  ---  */
 /*  ---  General  ---  */
 .card.my-profile__container{box-shadow: none !important; border-radius: 5px; margin-bottom: 40px;
