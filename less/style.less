@@ -6,7 +6,7 @@ html{font-size: 15px;}
 body{font-family: 'Montserrat', sans-serif; color: @grey1; background-color:@grey2;}
 h1, h2, h3, h4, h5, h6{font-family: 'Montserrat', sans-serif; color:@black1;}
 h1{font-weight: 300; font-size: 40px;}
-h5{color: @grey1; text-transform: uppercase; letter-spacing: 1.2px; font-size: 1rem; font-weight: 400;}
+h4, h5{color: @grey1; text-transform: uppercase; letter-spacing: 1.2px; font-size: 1rem; font-weight: 400;}
 
 /*  ---  Colours  ---  */
 @red: #EF233C;
@@ -450,17 +450,12 @@ body .dailycardInputTotal{border: none; background-color: rgba(239,35,60,0.2); h
 
 /*  ---  MY PROFILE  ---  */
 /*  ---  General  ---  */
-.card.my-profile__container{box-shadow: none !important; border-radius: 5px; margin-bottom: 40px;
-  .card-body{padding: 3rem 2rem;
-    form{display: flex; flex-wrap: wrap;
-      h5{margin: 2rem 0 1.5rem; width: 100%;
-        &:first-child{margin-top:0;}
-      }
-      .form-group{width: 50%; padding-right: 2rem;}
-      .btn-container{width: 100%;}
-    }
-  }
+.container > .card{box-shadow: none !important; border-radius: 5px; margin-bottom: 40px;}
+.tab-content{
+  hr{border-top: none; margin-bottom: 1.5rem;}
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{background-color: @red;}
+.nav-pills .nav-link:not(.active):hover{color:@red;}
 
 /*  ---  LOGIN  ---  */
 /*  ---  General  ---  */
