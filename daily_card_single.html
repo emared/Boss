@@ -85,7 +85,7 @@
         </li>
 
         <li class="nav-item d-none d-sm-inline-block ">
-          <a href="https://website2qhklmucl4agi.azurewebsites.net/" class="nav-link" id="MenuItem_KerpCoreTopMenu.Home">
+          <a href="./dashboard.html" class="nav-link" id="MenuItem_KerpCoreTopMenu.Home">
             <i class="nav-icon fal fa-border-all"></i>
             Dashboard
           </a>
@@ -142,7 +142,7 @@
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link " href="https://website2qhklmucl4agi.azurewebsites.net/Dashboard" id="MenuItem_Boss.Dashboard">
+              <a class="nav-link" href="./dashboard.html" id="MenuItem_Boss.Dashboard">
                 <i class="nav-icon fal fa-border-all"></i>
                 <p>Dashboard</p>
               </a>
@@ -153,15 +153,44 @@
                 <p>Insight</p>
               </a>
             </li>
-            <li class="nav-item has-treeview">
-              <a href="https://website2qhklmucl4agi.azurewebsites.net/Identity/Roles#" class="nav-link  " id="MenuItem_Boss.DailyCards">
+            <li class="nav-item ">
+              <a class="nav-link " href="./consultant-target_stat.html" id="MenuItem_Boss.ConsultantTargets.Stat">
+                <i class="nav-icon fal fa-chart-pie"></i>
+                <p>Targets Stats</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./daily_card_list.html" class="nav-link active" id="MenuItem_Boss.DailyCards">
                 <i class="nav-icon  fal fa-file-chart-line"></i>
                 <p>
                   Daily Cards
                 </p>
               </a>
             </li>
-            <li class="nav-item has-treeview menu-open">
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link" id="MenuItem_Boss.ConsultantTargets">
+                <i class="nav-icon  fal fa-bullseye-pointer"></i>
+                <p>
+                  Targets
+                  <i class="right fal fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview" role="tablist">
+                <li class="nav-item ">
+                  <a href="./consultant-target.html" class="nav-link" id="MenuItem_Boss.ConsultantTargets.Create">
+                    <i class="fal fa-dot-circle nav-icon"></i>
+                    <p>Crea Nuovo</p>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a href="./consultant-target_list.html" class="nav-link " id="MenuItem_Boss.ConsultantTargets.List">
+                    <i class="fal fa-list-alt nav-icon"></i>
+                    <p>Lista</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
               <a href="#" class="nav-link" id="MenuItem_Abp.Application.Main.Administration">
                 <i class="nav-icon  fal fa-wrench"></i>
                 <p>
@@ -170,7 +199,7 @@
                 </p>
               </a>
               <ul class="nav nav-treeview" role="tablist">
-                <li class="nav-item has-treeview menu-open" id="MenuItem_AbpIdentity">
+                <li class="nav-item has-treeview" id="MenuItem_AbpIdentity">
                   <a href="#" class="nav-link">
                     <i class="nav-icon  fal fa-id-card"></i>
                     <p>
@@ -193,8 +222,8 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item has-treeview menu-open" id="MenuItem_TenantManagement">
-                  <a href="https://website2qhklmucl4agi.azurewebsites.net/TenantManagement/Tenants#" class="nav-link active">
+                <li class="nav-item has-treeview" id="MenuItem_TenantManagement">
+                  <a href="#" class="nav-link">
                     <i class="nav-icon  fal fa-dumbbell"></i>
                     <p>
                       Tenant management
@@ -203,7 +232,7 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item ">
-                      <a href="https://website2qhklmucl4agi.azurewebsites.net/TenantManagement/Tenants" class="nav-link active" id="MenuItem_TenantManagement.Tenants">
+                      <a href="./tenants.html" class="nav-link" id="MenuItem_TenantManagement.Tenants">
                         <i class="fal fa-dumbbell nav-icon"></i>
                         <p>Tenants</p>
                       </a>
