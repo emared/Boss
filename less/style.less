@@ -86,6 +86,7 @@ body .btn-primary{background-color: @red; border-color: @red; border-radius: 5px
 
 /*  ---  Inputs  ---  */
 label{color: @grey4;
+  &.k-input-label{color: @grey4;}
   &.form-check-label{color: @grey1;}
 }
 label:not(.form-check-label):not(.custom-file-label){font-weight: 400; text-transform: uppercase; font-size: 13px; letter-spacing: 1px;
@@ -454,11 +455,14 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
   &:hover{color:@red; background-color: rgba(239,35,60,0.2); border-color: rgba(239,35,60,0.2);}
 }
 .k-button-group .k-button.k-state-active, .k-button-group .k-button.k-state-selected, .k-button-group .k-button:active, .k-button-group>input[type=radio]:checked+.k-button, .k-button-group>input[type=checkbox]:checked+.k-button{border-color: @red; color: #fff; background-color: @red; box-shadow: none;}
-.k-grid{
+.k-grid{color: @black1;
   .k-grid-header{background-color:@grey2;}
   .k-grid-content{
     .k-alt{background-color:@grey2;}
     tbody tr:hover{background-color: #e9e9e9;}
+    .k-state-selected{background-color: #FCD3D8; color: @black1;
+      &:hover{background-color: #FCD3D8;}
+    }
     .k-command-cell{
       .fas{font-weight: 300;}
       .far{font-weight: 300;}
@@ -473,7 +477,6 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
     .k-pager-info{color: @grey1;}
   }
 }
-.k-grid td.k-state-selected, .k-grid th.k-state-selected, .k-grid tr.k-state-selected>td{background-color: #FCD3D8;}
 .k-list .k-item.k-state-selected, .k-list-optionlabel.k-state-selected{background-color:@red;}
 .k-list .k-item.k-state-hover.k-state-selected, .k-list .k-item:hover.k-state-selected, .k-list-optionlabel.k-state-hover.k-state-selected, .k-list-optionlabel:hover.k-state-selected{background-color:@red;}
 
@@ -517,6 +520,54 @@ body .k-numerictextbox .k-numeric-wrap.k-state-disabled .k-input{background-colo
 body .dailycardInputTotal{border: none; background-color: rgba(239,35,60,0.2); height: calc(.75rem + 1.0rem); padding: .375rem .75rem; box-shadow: 0px 0px 0px 1px @red; border-radius: .25rem; width: 75px;}
 @media (max-width: 1225px) and (min-width: 992px){
   #dailyCardForm .col-sm-3 {flex: 0 0 16%;max-width: 16%;}
+}
+
+/*  ---  TARGETS  ---  */
+/*  ---  General  ---  */
+.custom-page-header{margin-bottom: 40px; margin-top: -60px;}
+@media (max-width: 650px){
+  .custom-page-header{margin-top: 0px;
+    .col-md-12{text-align: left !important;}
+  }
+}
+
+/*  ---  Dashboard  ---  */
+.consultant-wrapper{
+  .content .container{
+    > .form-row{background-color: #fff; margin-bottom: 25px; padding: 2rem; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.07);
+      input{width:100%; font-weight: 400; padding: 10px; min-width: 70px;}
+      table{
+        thead th{vertical-align: top; border-bottom: none;}
+        th{border-top: none;}
+        td{border-top: none;}
+      }
+      .table-container{overflow-x: auto;}
+      .col-md-2.alt{display: flex; flex-direction: column; justify-content: space-between;}
+    }
+  }
+}
+@media (min-width: 500px){
+  .consultant-wrapper .col-md-2.alt, .consultant-wrapper .col-md-3 {flex: 0 0 50%; max-width: 50%;}
+}
+@media (min-width: 768px){
+  .consultant-wrapper .col-md-3{flex: 0 0 25%; max-width: 25%;}
+  .consultant-wrapper .col-md-2.alt {flex: 0 0 20%; max-width: 20%;}
+}
+
+/*  ---  Targets  ---  */
+.target-wrapper{
+  .content .container{
+    form > .form-row{background-color: #fff; margin-bottom: 25px; padding: 2rem; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.07);
+      .k-input{width:100%; padding: 0;}
+      input{width:100%; font-weight: 400; min-width: 70px; min-height: 36px;}
+      table{
+        thead th{vertical-align: top; border-bottom: none;}
+        th{border-top: none;}
+        td{border-top: none;}
+      }
+      .table-container{overflow-x: auto;}
+    }
+  }
 }
 
 /*  ---  MY PROFILE  ---  */

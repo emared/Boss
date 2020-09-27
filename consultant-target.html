@@ -254,7 +254,7 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper" style="min-height: 745px;">
+    <div class="content-wrapper target-wrapper" style="min-height: 745px;">
 
       <!-- Content Header (Page header) -->
       <div class="content-header">
@@ -278,6 +278,11 @@
       <!-- MAIN CONTENT -->
       <div class="content">
         <div class="container">
+          <div class="row custom-page-header">
+            <div class="text-right col-md-12">
+              <button class="btn btn-primary" type="button" data-busy-text="Processing..."><i class="fal fa-list-alt"></i> <span>Guarda la lista</span></button>
+            </div>
+          </div>
           <form method="post" id="ConsTargetForm" novalidate="novalidate">
             <input type="hidden" id="ConsTarget_TenantId" name="ConsTarget.TenantId" value="">
             <input type="hidden" id="ConsTarget_TenantName" name="ConsTarget.TenantName" value="">
@@ -289,14 +294,13 @@
               </ul>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_UserId">Consulente</label>
                 <span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-autocomplete-clearable k-state-default" style=""><input id="consultants" name="consultants" type="text" value="" data-role="autocomplete"
                     placeholder="Cerca consulente per nome" class="k-input" autocomplete="off" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-owns="consultants_listbox" aria-autocomplete="list"><span
                     unselectable="on" class="k-icon k-clear-value k-i-close k-hidden" title="cancella" role="button" tabindex="-1"></span><span class="k-icon k-i-loading" style="display:none"></span></span>
               </div>
-
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_Year">Anno</label><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input"
                       aria-hidden="true" title="2020" tabindex="0" role="spinbutton" aria-valuemin="2000" aria-valuemax="2100" autocomplete="off" aria-valuenow="2020" aria-disabled="false" style=""><input data-val="true"
                       data-val-required="The Anno field is required." id="ConsTarget_Year" max="2100" min="2000" name="ConsTarget.Year" type="text" value="2020" data-role="numerictextbox" role="spinbutton" aria-valuemin="2000" aria-valuemax="2100"
@@ -304,8 +308,7 @@
                         aria-label="Increase value" title="Increase value"><span unselectable="on" class="k-icon k-i-arrow-60-up"></span></span><span unselectable="on" class="k-link k-link-decrease" aria-label="Decrease value"
                         title="Decrease value"><span unselectable="on" class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
               </div>
-
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_Month">Mese</label><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input"
                       aria-hidden="true" title="9" tabindex="0" role="spinbutton" aria-valuemin="1" aria-valuemax="12" autocomplete="off" aria-valuenow="9" aria-disabled="false" style=""><input data-val="true"
                       data-val-required="The Mese field is required." id="ConsTarget_Month" max="12" min="1" name="ConsTarget.Month" type="text" value="9" data-role="numerictextbox" role="spinbutton" aria-valuemin="1" aria-valuemax="12"
@@ -313,9 +316,7 @@
                         aria-label="Increase value" title="Increase value"><span unselectable="on" class="k-icon k-i-arrow-60-up"></span></span><span unselectable="on" class="k-link k-link-decrease" aria-label="Decrease value"
                         title="Decrease value"><span unselectable="on" class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
               </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_WorkedDays">Working Days</label><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input"
                       aria-hidden="true" title="" tabindex="0" role="spinbutton" aria-valuemin="0" aria-valuemax="31" autocomplete="off" aria-disabled="false" style=""><input data-val="true" data-val-required="The Giorni lavorati field is required."
                       id="ConsTarget_WorkedDays" max="31" min="0" name="ConsTarget.WorkedDays" type="text" value="" data-role="numerictextbox" role="spinbutton" aria-valuemin="0" aria-valuemax="31" class="k-input" aria-disabled="false"
@@ -323,7 +324,7 @@
                           unselectable="on" class="k-icon k-i-arrow-60-up"></span></span><span unselectable="on" class="k-link k-link-decrease" aria-label="Decrease value" title="Decrease value"><span unselectable="on"
                           class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
               </div>
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_Num_Target">Target Mese Vendite</label><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text"
                       class="k-formatted-value k-input" aria-hidden="true" title="" tabindex="0" role="spinbutton" aria-valuemin="0" autocomplete="off" aria-disabled="false" style=""><input data-val="true"
                       data-val-required="The Target vendite field is required." id="ConsTarget_Num_Target" min="0" name="ConsTarget.Num_Target" type="text" value="" data-role="numerictextbox" role="spinbutton" aria-valuemin="0" class="k-input"
@@ -331,7 +332,7 @@
                         title="Increase value"><span unselectable="on" class="k-icon k-i-arrow-60-up"></span></span><span unselectable="on" class="k-link k-link-decrease" aria-label="Decrease value" title="Decrease value"><span unselectable="on"
                           class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
               </div>
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_Amount_Target">Target Mese Fatturato</label><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text"
                       class="k-formatted-value k-input" aria-hidden="true" title="" tabindex="0" role="spinbutton" aria-valuemin="0" autocomplete="off" aria-disabled="false" style=""><input data-val="true"
                       data-val-number="The field Target fatturato must be a number." data-val-required="The Target fatturato field is required." id="ConsTarget_Amount_Target" min="0" name="ConsTarget.Amount_Target" type="text" value=""
@@ -341,7 +342,7 @@
               </div>
             </div>
             <div class="form-row">
-              <div class="col-md-4">
+              <div class="col-md-12 table-container">
                 <table class="table table-sm">
                   <thead>
                     <tr>
@@ -504,7 +505,7 @@
               </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_Amount_AverageTicket">Ticket Medio Vendite</label><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text"
                       class="k-formatted-value k-input" aria-hidden="true" title="" tabindex="0" role="spinbutton" aria-valuemin="0" autocomplete="off" aria-disabled="false" style=""><input data-val="true"
                       data-val-number="The field Ticke medio vendite must be a number." id="ConsTarget_Amount_AverageTicket" min="0" name="ConsTarget.Amount_AverageTicket" type="text" value="" data-role="numerictextbox" role="spinbutton"
@@ -512,7 +513,7 @@
                         aria-label="Increase value" title="Increase value"><span unselectable="on" class="k-icon k-i-arrow-60-up"></span></span><span unselectable="on" class="k-link k-link-decrease" aria-label="Decrease value"
                         title="Decrease value"><span unselectable="on" class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
               </div>
-              <div class="form-group  col-md-2">
+              <div class="form-group  col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_Amount_AverageNewTicket">Ticket Medio Vendite Nuovi</label><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text"
                       class="k-formatted-value k-input" aria-hidden="true" title="" tabindex="0" role="spinbutton" aria-valuemin="0" autocomplete="off" aria-disabled="false" style=""><input data-val="true"
                       data-val-number="The field Ticke medio vendite nuovi must be a number." id="ConsTarget_Amount_AverageNewTicket" min="0" name="ConsTarget.Amount_AverageNewTicket" type="text" value="" data-role="numerictextbox" role="spinbutton"
@@ -520,7 +521,7 @@
                         aria-label="Increase value" title="Increase value"><span unselectable="on" class="k-icon k-i-arrow-60-up"></span></span><span unselectable="on" class="k-link k-link-decrease" aria-label="Decrease value"
                         title="Decrease value"><span unselectable="on" class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
               </div>
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-4">
                 <label class="k-label k-input-label" for="ConsTarget_Amount_AverageRenewTicket">Ticket Medio Vendite Rinnovi</label><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text"
                       class="k-formatted-value k-input" aria-hidden="true" title="" tabindex="0" role="spinbutton" aria-valuemin="0" autocomplete="off" aria-disabled="false" style=""><input data-val="true"
                       data-val-number="The field Ticke medio vendite rinnovi must be a number." id="ConsTarget_Amount_AverageRenewTicket" min="0" name="ConsTarget.Amount_AverageRenewTicket" type="text" value="" data-role="numerictextbox"
@@ -531,16 +532,16 @@
 
             </div>
             <div class="form-row">
-              <div class="col-md-4">
+              <div class="col-md-12 table-container">
                 <table class="table table-sm">
                   <thead>
                     <tr>
                       <th scope2="col"></th>
-                      <th scope2="col">Mese</th>
-                      <th scope2="col">31-60GG</th>
-                      <th scope2="col">61-90GG</th>
-                      <th scope2="col">Oltre</th>
-                      <th scope2="col">Extra</th>
+                      <th scope2="col"><label>Mese</label></th>
+                      <th scope2="col"><label>31-60GG</label></th>
+                      <th scope2="col"><label>61-90GG</label></th>
+                      <th scope2="col"><label>Oltre</label></th>
+                      <th scope2="col"><label>Extra</label></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -643,12 +644,6 @@
 
                   </tbody>
                 </table>
-              </div>
-            </div>
-            <div class="row " style="margin-top: 40px;">
-              <div class="col-md-4 ">
-                <input type="submit" id="submitConsTarget" value="Salva" class="k-button k-primary">
-                <a class="k-button k-primary" href="https://website2qhklmucl4agi.azurewebsites.net/Targets/ListGrid">Lista Target</a>
               </div>
             </div>
             <input name="__RequestVerificationToken" type="hidden"
