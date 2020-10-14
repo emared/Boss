@@ -288,31 +288,52 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
         &.center-content{align-items: center;}
         .dash-card_inner{
           h3{font-weight: 300; font-size: 38px; margin-bottom: 20px;}
-          .dash-icon{width: 50px; height: 50px; background-color: rgba(239,35,60,0.2); border-radius: 99px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;
-            i{font-size: 20px; color: @red;}
+          .dash-icon{width: 70px; height: 70px; background-color: rgba(145,145,145,.2); border-radius: 99px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;
+            i{font-size: 30px; color: @grey1;}
           }
           .dash-result{font-size: 48px; font-weight: 300; color: @black1; line-height: 1;}
-          .dash-title{margin-bottom: 0; max-width:120px;}
+          .dash-title{margin-bottom: 0; max-width:120px;
+            &.bold{font-weight: 800;}
+          }
+          &.perBuono .dash-icon{background-color: #2A9134;
+            i{color: #fff;}
+          }
+          &.perMediocre .dash-icon{background-color: #F48F00;
+            i{color: #fff;
+              &:before{content: '\f39b';}
+            }
+          }
+          &.perInsufficiente .dash-icon{background-color: @red;
+              i{color: #fff;
+                &:before{content: '\f06a';}
+              }
+          }
+        }
+        &.base_5{padding: 0;
+          .c-col{width:20%; padding: ~"calc(3rem + 7.5px)"}
         }
       }
     }
     &.base_5{
-      .c-col{width:20%;
+      > .c-col{width:20%;
         &.double{width:40%;}
       }
     }
     &.base_4{
-      .c-col{width:25%;
+      > .c-col{width:25%;
         &.double{width:50%;}
       }
     }
     &.base_3{
-      .c-col{width:33.3333333%;
+      > .c-col{width:33.3333333%;
         &.double{width:66.6666666%;}
       }
     }
     &.base_2{
-      .c-col{width:50%;}
+      > .c-col{width:50%;}
+    }
+    &.base_1{
+      > .c-col{width:100%;}
     }
     &.grey-icons{
       .dash-icon{background-color: rgba(145,145,145,0.2) !important;
@@ -321,7 +342,7 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
     }
   }
 }
-.avviso-footer{color:@grey1; max-width: 800px; padding-bottom: 40px;}
+.avviso-footer{color:@grey1; max-width: 800px; padding-bottom: 40px; padding-top:20px;}
 
 @media (max-width: 1300px){
   .dashboard_container>.container .row .c-col .dash-card{padding: 1.5rem;
@@ -668,6 +689,7 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
 .k-list .k-item.k-state-selected, .k-list-optionlabel.k-state-selected{background-color:@red;}
 .k-grid td.k-state-selected:hover, .k-grid tr.k-state-selected:hover td {background-color: #fcd3d8;}
 .k-list .k-item.k-state-hover.k-state-selected, .k-list .k-item:hover.k-state-selected, .k-list-optionlabel.k-state-hover.k-state-selected, .k-list-optionlabel:hover.k-state-selected{background-color:@red;}
+.k-grid-header .k-i-sort-asc-sm, .k-grid-header .k-i-sort-desc-sm, .k-grid-header .k-sort-order{color: @red;}
 
 /*  ---  Pagination icons  ---  */
 .k-icon{font-family: "Font Awesome 5 Pro"; font-weight: 300;}
@@ -686,6 +708,12 @@ body.sidebar-collapse .main-sidebar:hover {box-shadow: 10px 0px 20px 0px rgba(0,
 .k-i-arrow-60-up::before, .k-i-arrow-n::before, .k-i-expand-n::before, .k-i-sarrow-n::before{content: "\f106";}
 /*  Filter  */
 .k-i-filter:before{content: "\f0b0"; font-size: 12px; color:@grey1;}
+/*  Sort Up  */
+.k-i-sort-asc-sm:before{content: "\f0d8";}
+/*  Sort Down  */
+.k-i-sort-desc-sm:before {content: "\f0d7";}
+/*  Calendar  */
+.k-i-calendar:before {content: "\f073";}
 
 /*  Modal  */
 .swal-overlay{background-color: rgba(0, 0, 0, .5);}
@@ -730,6 +758,16 @@ body .dailycardInputTotal{border: none; background-color: rgba(239,35,60,0.2); h
   #dailyCardForm{
     #calcfields{display: none;}
     .col-sm-3{flex: 0 0 33.333333333%; max-width: 33.333333333%;}
+  }
+}
+@media (min-width: 992px){
+  #dailyCardForm{
+    .col-sm-3{flex: 0 0 16%; max-width: 16%;}
+  }
+}
+@media (min-width: 1200px){
+  #dailyCardForm{
+    .col-sm-3{flex: 0 0 8.333333%; max-width: 8.333333%;}
   }
 }
 
@@ -810,6 +848,7 @@ body .dailycardInputTotal{border: none; background-color: rgba(239,35,60,0.2); h
     img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); object-fit: cover; width: 100%; height: 100%;}
   }
 }
+#AbpPageAlerts{position: absolute; bottom: 20px; left: 50%; z-index: 5; transform: translateX(-50%); width: 100%; max-width: 350px; padding: 0 15px;}
 @media (max-width: 999px){
   .abp-account-layout{
     .abp-account-container {width: 75%;}
